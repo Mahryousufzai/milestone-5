@@ -1,0 +1,304 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #C4E1F6;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form Styling */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #d6eaf8;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgb(0, 177, 236);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(8, 179, 247);
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 107, 220, 0.5);
+    outline: none;
+
+}
+
+
+/* Profile Picture Input Field */
+#pro {
+    width: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* Image Preview Container */
+#image-preview-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image round */
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Resume Output Styling */
+#output {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+}
+
+#output h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+#output h3 {
+    color: #057af8;
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#output p {
+    color: #0080ff;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Resume Display Styling */
+#output {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+    transition: transform 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+#output:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px #0294f6;
+}
+
+#output h2 {
+    color: #343a40;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+#output h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+#output h3 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+#output p {
+    color: #165798;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    #output h2 {
+        font-size: 1.8em;
+    }
+
+    #output h3 {
+        font-size: 1.2em;
+    }
+
+    #output p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    #output h2 {
+        font-size: 1.6em;
+    }
+
+    #output h3 {
+        font-size: 1.1em;
+    }
+
+    #output p {
+        font-size: 0.9em;
+    }
+}
